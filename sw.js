@@ -1,18 +1,21 @@
 const CACHE_NAME = 'quickseal-v1';
-const ASSETS = [
-  '/',
-  '/index.html',
-  '/src/main.tsx',
-  '/src/App.tsx',
-  '/src/index.css',
-];
+const BASE = '/quickseal-watermark-camera';
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS);
+      return cache.addAll([
+        BASE + '/',
+        BASE + '/index.html',
+        BASE + '/manifest.json',
+      ]);
     })
   );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(clients.claim());
 });
 
 self.addEventListener('fetch', (event) => {
