@@ -1,0 +1,6 @@
+{
+  "name": "QuickSeal - Watermark Camera",
+  "description": "A lightweight, fast-starting PWA for adding timestamps and watermarks to photos instantly. Optimized for speed and specific time ranges.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}
