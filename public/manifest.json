@@ -2,7 +2,7 @@
   "name": "QuickSeal Watermark Camera",
   "short_name": "QuickSeal",
   "description": "Fast automatic watermark camera",
-  "start_url": "/",
+  "start_url": "/quickseal-watermark-camera/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
